@@ -9,8 +9,8 @@
  */
 int main(void)
 {
-	char stde[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	write(2, stde, strlen(stde));
+	write(2, msg, strlen(msg));
 	return (1);
 }
