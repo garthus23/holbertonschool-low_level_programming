@@ -1,7 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/* function to print the the base16 */
+/**
+ * main - print all the numbers of base 16 in lowercase
+ * Return: 0 if the program works
+ */
 int main(void)
 {
 	int i;
