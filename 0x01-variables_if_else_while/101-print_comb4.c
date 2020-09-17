@@ -10,7 +10,7 @@ int main(void)
 {
 	int i;
 
-	for (i = 1; i < 789; i++)
+	for (i = 1; i < 790; i++)
 	{
 		int centaine = i / 100;
 		int dizaine = (i / 10) % 10;
