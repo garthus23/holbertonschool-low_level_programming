@@ -2,7 +2,10 @@
 #include <time.h>
 #include <stdio.h>
 
-/* main function to decribe the random number */
+/**
+ * main - print the value of a random number
+ * Return: 0 if the program works
+ */
 int main(void)
 {
 	int n;
