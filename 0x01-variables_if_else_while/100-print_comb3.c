@@ -4,23 +4,22 @@
 /* function to print the first 10 Digits*/
 int main(void)
 {
-	int i = 1;
-	int n = 2;
+	int i;
 
-	while (i < 100)
+	for (i = 1; i < 100; i++)
 	{
-		putchar((i / 10) + '0');
-		putchar((i % 10) + '0');
-		i++;
-		if (i < 89)
+		int dizaine = i / 10;
+		int unite = i % 10;
+
+		if (unite > dizaine)
 		{
-			putchar(',');
-			putchar(' ');
-		}
-		if (i % 10 == 0)
-		{
-			i += n;
-			n++;
+			putchar(dizaine + '0');
+			putchar(unite  + '0');
+			if (i < 89)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
