@@ -1,7 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/* function to print the alphabet */
+/**
+ * main - print the alphabet except 'q' and 'e'
+ * Return: 0 if the program works
+ */
+
 int main(void)
 {
 	char c;
