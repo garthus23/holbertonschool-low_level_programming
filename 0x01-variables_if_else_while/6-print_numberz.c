@@ -1,15 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/* function to print the First 10 DIgits */
+/* function to print the first 10 Digits*/
 int main(void)
 {
 	int i;
 
 	for (i = 0; i < 10; i++)
 	{
-		printf("%d", i);
+		putchar((i%10) + '0');
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
