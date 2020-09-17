@@ -3,7 +3,11 @@
 #include <stdio.h>
 #include <string.h>
 
-/* function to compare first and last digit */
+/**
+ * main - print the value of the last digit of a random number and compare
+ * Return: 0 if the program works
+ */
+
 int main(void)
 {
 	int n;
