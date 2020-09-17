@@ -1,7 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/* function to print the first 10 Digits*/
+
+/**
+ * main - print all possible different combinations of three digits
+ * Return: 0 if the program works
+ */
 int main(void)
 {
 	int i;
