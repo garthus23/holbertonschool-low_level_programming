@@ -1,7 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/* function to print the first 10 Digits*/
+/**
+ * main - print the numbers from 00 to 99
+ * Return: 0 if the program works
+ */
 int main(void)
 {
 	int i;
