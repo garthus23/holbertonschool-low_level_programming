@@ -1,7 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/* function to print the double alphabet ( uppercase and lowercase ) */
+/**
+ * main - print the alphabet in lowercase and uppercase
+ * Return: 0 if the program works
+ */
+
 int main(void)
 {
 	char c;
