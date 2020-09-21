@@ -8,6 +8,6 @@
 
 int main(void)
 {
-	holberton();
+	print_alphabet();
 	return (0);
 }
