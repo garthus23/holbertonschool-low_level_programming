@@ -1,9 +1,8 @@
-#include "_putchar.h"
+#include "holberton.h"
+
 /**
- *
- * holberton : print holberton
- * Return : 0 when it works
- *
+ * holberton - Function to print Holberton
+ * Return: 0 when it works
  */
 
 int holberton(void)
