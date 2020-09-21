@@ -9,13 +9,15 @@
 void main(void)
 {
 	int i = 0;
+	int n = 0;
 
 	for (i = 0 ; i < 1024 ; i++)
 	{
 		if ((i % 3) == 0 || (i % 5) == 0)
 		{
-			printf("%d ", i);
+			n = n + i;
 		}
 	}
-	printf("\n");
+
+	printf("%d\n", n);
 }
