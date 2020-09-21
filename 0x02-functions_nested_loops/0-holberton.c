@@ -5,7 +5,7 @@
  * Return: 0 when it works
  */
 
-int holberton(void)
+int main(void)
 {
 	_putchar('H');
 	_putchar('o');
