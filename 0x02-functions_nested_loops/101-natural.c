@@ -2,11 +2,11 @@
 #include "holberton.h"
 
 /**
- * natural - print all the multiples of 3 or 5 below 1024
+ * main - print all the multiples of 3 or 5 below 1024
  * Return: 0 when it works
  */
 
-void natural(void)
+void main(void)
 {
 	int i = 0;
 
