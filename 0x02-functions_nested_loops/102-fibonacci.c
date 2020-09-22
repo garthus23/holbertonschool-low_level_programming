@@ -13,12 +13,12 @@ int main(void)
 	j = 1;
 	k = 1;
 	printf("%.0lf, ", j);
-	for (i = 0; i <= 50; i++)
+	for (i = 0; i <= 49; i++)
 	{
 		k = k + j;
 		printf("%.0lf", k);
 		j = k - j;
-		if (i < 50)
+		if (i < 49)
 		{
 			printf(", ");
 		}
