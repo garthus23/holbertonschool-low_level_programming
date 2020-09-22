@@ -20,4 +20,5 @@ int main(void)
 		j = k - j;
 	}
 	printf("\n");
+	return (0);
 }
