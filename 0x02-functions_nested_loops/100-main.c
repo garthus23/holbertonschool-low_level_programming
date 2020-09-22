@@ -15,10 +15,5 @@ int main(void)
     _putchar('\n');
     print_times_table(12);  
     _putchar('\n');
-    print_times_table(14);
-    _putchar('\n');
-    print_times_table(-2);  
-    _putchar('\n');
-    print_times_table(0);
     return (0);
 }
