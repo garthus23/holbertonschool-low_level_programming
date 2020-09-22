@@ -6,7 +6,7 @@
  * Return: 0 when it works
  */
 
-void main(void)
+int main(void)
 {
 	int i = 0;
 	int n = 0;
@@ -18,6 +18,6 @@ void main(void)
 			n = n + i;
 		}
 	}
-
 	printf("%d\n", n);
+	return (0);
 }
