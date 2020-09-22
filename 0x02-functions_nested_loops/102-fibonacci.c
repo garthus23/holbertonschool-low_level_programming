@@ -11,14 +11,13 @@ int main(void)
 	double i, j, n, k;
 
 	j = 1;
-	k = 0;
-	printf("%.0lf ", k);
-
+	k = 1;
+	printf("%.0lf ", j);
 	for (i = 0; i <= 50; i++)
 	{
 		k = k + j;
 		printf("%.0lf ", k);
-		j = k-j;
+		j = k - j;
 	}
 	printf("\n");
 }
