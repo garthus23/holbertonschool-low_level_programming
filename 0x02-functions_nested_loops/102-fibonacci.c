@@ -2,7 +2,7 @@
 #include "holberton.h"
 
 /**
- * function - 
+ * main - return the 50 first numbers from the fibonacci list
  * Return: 0 when it works
  */
 
@@ -18,7 +18,7 @@ int main(void)
 	{
 		k = k + j;
 		printf("%.0lf ", k);
-		j = k-j;	
+		j = k-j;
 	}
 	printf("\n");
 }
