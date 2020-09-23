@@ -13,18 +13,21 @@ int main(void)
 	j = 1;
 	k = 1;
 
-	for (i = 0; i <= 30; i++)
+	for (i = 0; i <= 50; i++)
 	{
-		k = k + j;
-		if (k % 2 == 0)
+		if (j < 4000000 && k < 4000000)
 		{
-			printf("%ld", k);
-			if (i < 30)
+			k = k + j;
+			if (k % 2 == 0)
 			{
-				printf("\n");
+				printf("%ld", k);
+				if (i < 30)
+				{
+					printf("\n");
+				}
 			}
+			j = k - j;
 		}
-		j = k - j;
 	}
 	printf("\n");
 	return (0);
