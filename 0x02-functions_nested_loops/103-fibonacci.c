@@ -12,7 +12,6 @@ int main(void)
 
 	j = 1;
 	k = 1;
-	printf("%ld, ", j);
 
 	for (i = 0; i <= 30; i++)
 	{
@@ -22,7 +21,7 @@ int main(void)
 			printf("%ld", k);
 			if (i < 30)
 			{
-				printf(", ");
+				printf("\n");
 			}
 		}
 		j = k - j;
