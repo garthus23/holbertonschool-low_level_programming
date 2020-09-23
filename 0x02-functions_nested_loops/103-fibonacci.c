@@ -17,7 +17,7 @@ int main(void)
 	for (i = 0; i <= 30; i++)
 	{
 		k = k + j;
-		if ( k % 2 == 0)
+		if (k % 2 == 0)
 		{
 			printf("%ld", k);
 			if (i < 30)
