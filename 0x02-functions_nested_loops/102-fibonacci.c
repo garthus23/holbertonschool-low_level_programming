@@ -8,15 +8,15 @@
 
 int main(void)
 {
-	double i, j, k;
+	long i, j, k;
 
 	j = 1;
 	k = 1;
-	printf("%.0lf, ", j);
+	printf("%ld, ", j);
 	for (i = 0; i <= 49; i++)
 	{
 		k = k + j;
-		printf("%.0lf", k);
+		printf("%ld", k);
 		j = k - j;
 		if (i < 49)
 		{
