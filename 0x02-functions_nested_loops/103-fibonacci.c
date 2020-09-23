@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	long i, j, k;
+	long i, j, k, n;
 
 	j = 1;
 	k = 1;
@@ -20,13 +20,12 @@ int main(void)
 			k = k + j;
 			if (k % 2 == 0)
 			{
-				printf("%ld", k);
-				printf("\n");
+				n = k + n;
 			}
 			j = k - j;
 		}
 	}
-	printf("%ld", k);	
+	printf("%ld", n);
 	printf("\n");
 	return (0);
 }
