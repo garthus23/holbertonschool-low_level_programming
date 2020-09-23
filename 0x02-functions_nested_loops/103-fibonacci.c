@@ -15,20 +15,18 @@ int main(void)
 
 	for (i = 0; i <= 50; i++)
 	{
-		if (j < 4000000 && k < 4000000)
+		if (j <= 4000000 || k <= 4000000)
 		{
 			k = k + j;
 			if (k % 2 == 0)
 			{
 				printf("%ld", k);
-				if (i < 30)
-				{
-					printf("\n");
-				}
+				printf("\n");
 			}
 			j = k - j;
 		}
 	}
+	printf("%ld", k);	
 	printf("\n");
 	return (0);
 }
