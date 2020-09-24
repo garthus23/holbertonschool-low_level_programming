@@ -1,0 +1,8 @@
+#include "holberton.h"
+
+/**
+* _isupper - check for uppercase
+* @c: integer
+* Return: 0 - when it works
+*/
+
