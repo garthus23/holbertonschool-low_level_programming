@@ -6,7 +6,7 @@
 * Return: 0 - when it works
 */
 
-void main(void)
+int main(void)
 {
 	int number;
 
@@ -30,4 +30,5 @@ void main(void)
 		}
 	}
 	printf("\n");
+	return (0);
 }
