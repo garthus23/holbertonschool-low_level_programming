@@ -1,3 +1,5 @@
+#include <math.h>
+#include <stdio.h>
 #include "holberton.h"
 
 /**
@@ -8,6 +10,15 @@
 
 void print_number(int n)
 {
+	int i;
+	i = n;
+
+	for (divide = 0; i != 0; divide++)
+	{
+		i =% 10;
+	}
+	printf("%d", i);
+	
 	if (n < 0)
 	{
 		_putchar('-');

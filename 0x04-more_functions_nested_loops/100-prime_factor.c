@@ -16,13 +16,9 @@ int main(void)
 		if (number % j == 0)
 		{
 			number = number / j;
-			if (result < j)
-			{
-				result = j;
-			}
 			j = 2;
 		}
 	}
-	printf("%ld\n", result);
+	printf("%ld\n", number);
 	return (0);
 }
