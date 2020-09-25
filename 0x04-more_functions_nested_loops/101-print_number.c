@@ -9,7 +9,7 @@
 
 void print_number(int n)
 {
-	unsigned int j, len, tmp;
+	unsigned int j, len, tmp, i;
 
 	j = 0;
 	len = 0;
@@ -19,10 +19,12 @@ void print_number(int n)
 		return;
 	}
 	tmp = n;
+	i = n;
 	if (n < 0)
 	{
 		_putchar('-');
 		tmp = -n;
+		i = -n;
 	}
 	while (tmp)
 	{
@@ -36,7 +38,7 @@ void print_number(int n)
 	}
 	for (j = 0; j < len; j++)
 	{
-		_putchar((n / tmp % 10) + '0');
+		_putchar((i / tmp % 10) + '0');
 		tmp = tmp / 10;
 	}
 }
