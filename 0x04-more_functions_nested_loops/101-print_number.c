@@ -1,50 +1,42 @@
-#include <math.h>
 #include <stdio.h>
 #include "holberton.h"
 
 /**
-* print_number - print the number
-* @n: integer
-* Return: 0 - when it works
-*/
+ * print_number - print the number
+ * @n: integer
+ * Return: 0 - when it works
+ */
 
 void print_number(int n)
 {
-	int i;
-	i = n;
+	unsigned int j, len, tmp;
 
-	for (divide = 0; i != 0; divide++)
+	j = 0;
+	len = 0;
+	if (!n)
 	{
-		i =% 10;
+		_putchar('0');
+		return;
 	}
-	printf("%d", i);
-	
+	tmp = n;
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		tmp = -n;
 	}
-	if (n > -10 && n < 10)
+	while (tmp)
 	{
-		_putchar(n + '0');
+		tmp = tmp / 10;
+		len++;
 	}
-	if (n > 10 && n < 100)
+	tmp = 1;
+	for (j = 1; j < len; j++)
 	{
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
+		tmp = tmp * 10;
 	}
-	if (n > 100 && n < 1000)
+	for (j = 0; j < len; j++)
 	{
-		_putchar(n / 100 + '0');
-		_putchar(n / 10 % 10 + '0');
-		_putchar(n % 10 + '0');
+		_putchar((n / tmp % 10) + '0');
+		tmp = tmp / 10;
 	}
-	if (n > 1000 && n < 10000)
-	{
-		_putchar(n / 1000 + '0');
-		_putchar(n / 100 % 10 + '0');
-		_putchar(n / 10 % 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-
 }
