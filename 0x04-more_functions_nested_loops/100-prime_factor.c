@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	long j, number, result;
+	long j, number;
 
 	number = 612852475143;
 
