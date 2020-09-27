@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
-* function - main function
-* @n: parameter
-* Return: 0 when it works
+* swap_int - swap two integers
+* @a: an integer
+* @b: an integer
+* Return: none it's a void function
 */
 
 void swap_int(int *a, int *b)
