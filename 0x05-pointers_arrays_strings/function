@@ -1,0 +1,9 @@
+#include "holberton.h"
+
+/**
+* function - main function
+* @n: parameter
+* Return: 0 when it works
+*/
+
+
