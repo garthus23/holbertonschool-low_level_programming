@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-* puts2 - print every two characters
+* puts_half - print half
 * @str: a string
 * Return: nothing
 */
@@ -13,11 +13,11 @@ void puts_half(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 	{
 	}
-	
+
 	if (i % 2 != 0)
 	{
 		j = (i - 1) / 2;
-	}	
+	}
 	else
 	{
 		j = i / 2;
