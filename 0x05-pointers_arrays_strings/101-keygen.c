@@ -2,7 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main(void)
+
+/**
+* main - main function to create the password
+* Return - nothing it'a void
+*/
+
+void main(void)
 {
 	int i, sum, r;
 
