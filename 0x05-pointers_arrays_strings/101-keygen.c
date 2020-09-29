@@ -8,7 +8,7 @@
 * Return - nothing it'a void
 */
 
-void main(void)
+int main(void)
 {
 	int i, sum, r;
 
@@ -40,4 +40,5 @@ void main(void)
 
 	password[i] = r;
 	printf("%s", password);
+	return (0);
 }
