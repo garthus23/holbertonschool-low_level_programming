@@ -5,7 +5,7 @@
 
 /**
 * main - main function to create the password
-* Return - nothing it'a void
+* Return: 0 when it works
 */
 
 int main(void)
