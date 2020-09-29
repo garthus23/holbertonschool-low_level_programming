@@ -4,21 +4,34 @@
 
 int main()
 {
-    int counter = 0;
-    srandom(time(NULL));
-    char randChar;
-    char password[8];
+	int i, sum, r;
 
-    int  passwordLength = 8;
+	char array[63] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-    while(counter < passwordLength)
-    {
-        randChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[random () % 62];
-        //printf("%c", randChar);
-	password[counter] = randChar;
-        counter++;
-    }
-    printf("%s", password);
-    return 0;
+	char password[100];
+
+	srand(time(NULL));
+
+	sum = 0;
+
+	i = 0;
+
+	while (sum < (2772 - 122))
+
+	{
+
+		r = rand() % 62;
+
+		password[i] = array[r];
+
+		sum = sum + password[i];
+
+		i++;
+
+	}
+
+	r = 2772 - sum;
+
+	password[i] = r;
+	printf("%s", password);
 }
- 
