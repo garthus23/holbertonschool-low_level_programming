@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
-* function - main function
-* @n: parameter
-* Return: 0 when it works
+* *_strcpy - string copy function
+* @src: string source
+* @dest: string destination
+* Return: dest
 */
 
 char *_strcpy(char *dest, char *src)
