@@ -28,5 +28,9 @@ int main(void)
     printf("%d\n", n);
     n = _atoi("");
     printf("%d\n", n);
+    n = _atoi("-2147483648");
+    printf("%d\n", n);
+    n = _atoi("+++++ +-+ 2242454");
+    printf("%d\n", n);
     return (0);
 }
