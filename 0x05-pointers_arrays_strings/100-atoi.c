@@ -8,22 +8,20 @@
 
 int _atoi(char *s)
 {
-	int i, r, n;
+	unsigned int r;
+	int i, n;
 
 	n = 0;
 	r = 0;
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == '-')
-		{
-			n--;
-		}
-		else if (s[i] == '+')
-		{
-			n++;
-		}
 		if (s[i] >= 48 && s[i] <= 57)
 		{
+			if (s[i - 1] == '-' && s[i - 2] != '-')
+			{
+				n = -1;
+			}
 			if (r != 0)
 			{
 				r = r * 10 + (s[i] - '0');
