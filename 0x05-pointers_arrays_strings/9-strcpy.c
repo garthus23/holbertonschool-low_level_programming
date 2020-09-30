@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
-* function - main function
-* @n: parameter
+* *_strcpy - copy a string
+* @src: string source
+* @dest: string destination
 * Return: 0 when it works
 */
 
@@ -18,7 +19,6 @@ char *_strcpy(char *dest, char *src)
 			break;
 		}
 		dest[len] = src[len];
-		
 	}
 	return (dest);
 }
