@@ -9,14 +9,16 @@
 void print_number(int n)
 {
 	int i;
-	long int tmp, r;
+	unsigned int tmp, r;
 
-	r = n;
-
-	if (r < 0)
+	if (n < 0)
 	{
 		_putchar('-');
-		r = -r;
+		r = -n;
+	}
+	else
+	{
+		r = n;
 	}
 	i = 1;
 	tmp = r;
