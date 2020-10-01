@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_number - print_number with putchar
+ * print_number - print number with putchar
  * @n: integer
  * Return: nothing
  */
