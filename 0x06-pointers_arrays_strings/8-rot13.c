@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
-* main - main function
-* @n: integer
-* Return: 0
+* *rot13 - rotate alpha 13 positions
+* @s: a *char
+* Return: s
 */
 
 char *rot13(char *s)
