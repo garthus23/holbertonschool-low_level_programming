@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
 * *leet - main function
@@ -14,9 +13,6 @@ char *leet(char *s)
 	char maju[6] = "AELOT";
 	char numb[6] = "43107";
 
-	
-	printf("%s", s);
-
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; minus[j] != '\0'; j++)
@@ -25,7 +21,7 @@ char *leet(char *s)
 			{
 				s[i] = numb[j];
 			}
-		}	
+		}
 	}
 	return (s);
 }
