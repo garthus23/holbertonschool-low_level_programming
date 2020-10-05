@@ -11,7 +11,7 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	char *r;
+	char *r = NULL;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -19,10 +19,6 @@ char *_strchr(char *s, char c)
 		{
 			r = &s[i];
 			break;
-		}
-		else
-		{
-			r = NULL;
 		}
 	}
 	return (r);
