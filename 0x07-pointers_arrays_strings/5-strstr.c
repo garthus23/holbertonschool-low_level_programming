@@ -13,6 +13,7 @@ char *_strstr(char *haystack, char *needle)
 	int i, j, len, l, n, t;
 	char *r;
 
+	r = NULL;
 	len = 0;
 	j = 0;
 	for (i = 0; needle[i] != '\0'; i++)
