@@ -17,9 +17,5 @@ int main(void)
     {
         printf("%s\n", f);
     }
-    else if ( f == NULL)
-    {
-	printf("toto\n");
-    }
     return (0);
 }
