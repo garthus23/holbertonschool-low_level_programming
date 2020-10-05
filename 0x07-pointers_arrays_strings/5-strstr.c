@@ -20,20 +20,20 @@ char *_strstr(char *haystack, char *needle)
 	{
 		len++;
 	}
-
+	len = len - 1;
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
 		if (haystack[i] == needle[j])
 		{
 			l = i;
-			for (j = 0; j != len; j++)
+			for (j = 0; j <= len; j++)
 			{
 				if (haystack[l] == needle[j])
 				{
 					l++;
 					n++;
 				}
-				if (n == (len - 1))
+				if (n == (len))
 				{
 					r = &haystack[i];
 					t = 12;
