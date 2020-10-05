@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
-* main - main function
-* @n: integer
-* Return: 0
+* print_chessboard - prints the chessboard
+* @a: array
+* Return: nothing
 */
 
 void print_chessboard(char (*a)[8])
