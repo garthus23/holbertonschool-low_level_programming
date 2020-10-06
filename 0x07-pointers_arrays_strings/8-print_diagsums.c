@@ -14,7 +14,7 @@ void print_diagsums(int *a, int size)
 	int i;
 	int sum1;
 	int sum2;
-	int xy 
+	int xy;
 
 	xy = size * size;
 
