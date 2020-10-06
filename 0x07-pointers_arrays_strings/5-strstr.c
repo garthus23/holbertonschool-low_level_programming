@@ -15,29 +15,39 @@ char *_strstr(char *haystack, char *needle)
 
 	r = NULL, len = 0, j = 0;
 	for (i = 0; needle[i] != '\0'; i++)
+	{
 		len++;
-	len = len - 1;
-	
-	if (len < 1)
+	}
+	if (len == 0)
+	{
 		r = &haystack[0];
-	else
-		for (i = 0; haystack[i] != '\0'; i++)
+	}
+	len = len - 1;
+	for (i = 0; haystack[i] != '\0'; i++)
+	{
+		if (haystack[i] == needle[j])
 		{
-			if (haystack[i] == needle[j])
-				l = i;
-				for (j = 0; j <= len; j++)
+			l = i;
+			for (j = 0; j <= len; j++)
+			{
+				if (haystack[l] == needle[j])
 				{
-					if (haystack[l] == needle[j])
-						l++;
-						n++;
-					if (n == (len))
-						r = &haystack[i];
-						t = 12;
-						break;
+					l++;
+					n++;
 				}
-			j = 0,n = 0;
-			if (t == 12)
-				break;
-		}	
+				if (n == (len))
+				{
+					r = &haystack[i];
+					t = 12;
+					break;
+				}
+			}
+		}
+		j = 0, n = 0;
+		if (t == 12)
+		{
+			break;
+		}
+	}
 	return (r);
 }
