@@ -10,14 +10,17 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int n;
-	int i, j, m;
+	int i, j, m, lena;
 
 	n = 0;
 	m = 0;
-
+	
+	for (lena = 0; accept[lena] != '\0'; lena++)
+	{
+	}
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (m == 4 && n != 0)
+		if (m == lena && n != 0)
 		{
 			break;
 		}
