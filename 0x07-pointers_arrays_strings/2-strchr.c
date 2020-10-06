@@ -24,7 +24,7 @@ char *_strchr(char *s, char c)
 			break;
 		}
 	}
-	if (s[i+1] == '\0' && s[i+1] == c)
+	if (s[i] == '\0' && s[i] == c)
 	{
 		r = &s[i];
 	}
