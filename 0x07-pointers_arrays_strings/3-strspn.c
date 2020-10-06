@@ -14,7 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	n = 0;
 	m = 0;
-	
+
 	for (lena = 0; accept[lena] != '\0'; lena++)
 	{
 	}
