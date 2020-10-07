@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 int _sqrt_recursion2(int num, int r);
 
