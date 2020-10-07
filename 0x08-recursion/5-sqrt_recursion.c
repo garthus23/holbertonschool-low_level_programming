@@ -31,11 +31,12 @@ int _sqrt_recursion2(int num, int r)
 {
 	if (num > 0 && num * num != r)
 	{
-		return (num = _sqrt_recursion2(num - 1, r));
+		num = _sqrt_recursion2(num - 1, r);
 	}
+
 	if (num == 0 || num < 0)
 	{
-		return (-1);
+		num = -1;
 	}
 	return (num);
 }
