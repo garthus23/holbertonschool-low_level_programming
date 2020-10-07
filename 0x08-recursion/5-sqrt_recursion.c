@@ -19,13 +19,14 @@ int _sqrt_recursion(int n)
 
 int _sqrt_recursion2(int num, int r)
 {
-	if (num > 1 && num*num != r)
+
+	if (num > 0 && num*num != r)
 	{
-		printf("%d\n",num);
-		return num *_sqrt_recursion2(num-1, r);
+		return num = _sqrt_recursion2(num-1, r);
 	}
-	else 
+	if (num == 0 )
 	{
-		return 0;
+		return (-1);
 	}
+	return num;
 }
