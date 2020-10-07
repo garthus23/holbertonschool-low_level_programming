@@ -20,6 +20,10 @@ int _sqrt_recursion(int n)
 	{
 		return (0);
 	}
+	if (r == 1)
+	{
+		return (1);
+	}
 	return (_sqrt_recursion2(num, r));
 }
 
