@@ -2,31 +2,40 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+int _sqrt_recursion2(int num, int r);
+
 /**
 * _sqrt_recursion - natural square root of a number
-* @n: integer
-* Return: int
+* @n: number * number = resultat
+* Return: number
 */
-int _sqrt_recursion2(int num, int r);
+
 
 int _sqrt_recursion(int n)
 {
 	int r = n;
 	int num = n;
-	return _sqrt_recursion2(num, r);
-	
+
+	return (_sqrt_recursion2(num, r));
 }
+
+/**
+* _sqrt_recursion2 - natural square root of a number
+* @num: number * number = resultat
+* @r: number to get
+* Return: number
+*/
+
 
 int _sqrt_recursion2(int num, int r)
 {
-
-	if (num > 0 && num*num != r)
+	if (num > 0 && num * num != r)
 	{
-		return num = _sqrt_recursion2(num-1, r);
+		return (num = _sqrt_recursion2(num - 1, r));
 	}
-	if (num == 0 )
+	if (num == 0 || num < 0)
 	{
 		return (-1);
 	}
-	return num;
+	return (num);
 }
