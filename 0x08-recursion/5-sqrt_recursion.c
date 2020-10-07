@@ -16,6 +16,10 @@ int _sqrt_recursion(int n)
 	int r = n;
 	int num = n;
 
+	if (r == 0)
+	{
+		return (0);
+	}
 	return (_sqrt_recursion2(num, r));
 }
 
