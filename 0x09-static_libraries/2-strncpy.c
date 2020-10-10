@@ -1,8 +1,10 @@
 #include "holberton.h"
 
 /**
-* main - main function
+* *_strncpy - copy a string
 * @n: integer
+* @dest: destination
+* @src: source
 * Return: 0
 */
 
@@ -14,7 +16,7 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		dest[i] = src[i];
 	}
-	for(; i < n ; i++)
+	for (; i < n; i++)
 	{
 		dest[i] = '\0';
 	}
