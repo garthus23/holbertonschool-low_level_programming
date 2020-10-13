@@ -24,13 +24,13 @@ char *argstostr(int ac, char **av)
 	{
 		for(i = 1; i < ac; i++)
 		{
-			//printf("%c\n", av[i][1]);
 		        for(; av[i][k] != '\0'; k++)
 			{
 				s[j] = av[i][k];
 				j++;
 			}
 			s[j] = '\n';
+			j++;
 			k = 0;
 		} 
 		s[j] = '\0';
