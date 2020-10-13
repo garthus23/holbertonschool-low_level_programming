@@ -25,20 +25,27 @@ char *argstostr(int ac, char **av)
 	{
 		l = verifylenargav(ac, av);
 		s = malloc(sizeof(char) * l);
-		k = 0;
-		for (i = 0; i < ac; i++)
+		if (s != NULL)
 		{
-			for (; av[i][k] != '\0'; k++)
-			{
-				s[j] = av[i][k];
-				j++;
-			}
-			s[j] = '\n';
-			j++;
 			k = 0;
+			for (i = 0; i < ac; i++)
+			{
+				for (; av[i][k] != '\0'; k++)
+				{
+					s[j] = av[i][k];
+					j++;
+				}
+				s[j] = '\n';
+				j++;
+				k = 0;
+			}
+			s[j] = '\0';
+			return (s);
 		}
-		s[j] = '\0';
-		return (s);
+		else
+		{
+			return (NULL);
+		}
 	}
 }
 
