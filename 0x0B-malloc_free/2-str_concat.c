@@ -11,7 +11,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, k;
+	int i, j, k, l;
 	char *arr = NULL;
 
 
@@ -24,18 +24,19 @@ char *str_concat(char *s1, char *s2)
 	}
 	k = i + j;
 
-	arr = malloc(sizeof(char) * (k + 6));
+	arr = malloc(sizeof(char) * (k + 1));
 
 	if (arr != NULL)
 	{
-		for (k = 0; k < i; k++)
+		for (l = 0; l < i; l++)
 		{
-			arr[k] = s1[k];
+			arr[l] = s1[l];
 		}
-		for (k = 0; k < i + j; k++)
+		for (l = 0; l < j; l++)
 		{
-			arr[k + i] = s2[k];
+			arr[i + l] = s2[l];
 		}
+		arr[k] = '\0';
 		return (arr);
 	}
 	else
