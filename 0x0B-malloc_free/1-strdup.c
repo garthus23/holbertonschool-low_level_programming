@@ -17,11 +17,24 @@ char *_strdup(char *str)
 	{
 	}
 
-	arr = malloc(sizeof(char) * i);
-
-	for (j = 0; j != i; j++)
+	if (str)
 	{
-		arr[j] = str[j];
+		arr = malloc(sizeof(char) * i);
+		if (arr)
+		{
+			for (j = 0; j != i; j++)
+			{
+				arr[j] = str[j];
+			}
+		}
+		else
+		{
+			return (NULL);
+		}
+	}
+	else
+	{
+		return (NULL);
 	}
 	return (arr);
 }
