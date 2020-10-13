@@ -17,7 +17,7 @@ char *_strdup(char *str)
 	{
 	}
 
-	arr = malloc(sizeof(char) * i);
+	arr = malloc(sizeof(char) * (i + 1));
 
 	if (str != NULL && arr != NULL)
 	{
@@ -25,6 +25,7 @@ char *_strdup(char *str)
 		{
 			arr[j] = str[j];
 		}
+		arr[j] = '\0';
 		return (arr);
 	}
 	else
