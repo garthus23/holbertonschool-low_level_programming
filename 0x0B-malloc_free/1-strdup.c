@@ -26,6 +26,7 @@ char *_strdup(char *str)
 			{
 				arr[j] = str[j];
 			}
+			return (arr);
 		}
 		else
 		{
@@ -36,5 +37,4 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	return (arr);
 }
