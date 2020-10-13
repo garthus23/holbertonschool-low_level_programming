@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int verifylenargav(int ac, char **av);
+
 /**
  * *argstostr - function that concatenates all the arguments
  * @ac: number of argument
@@ -11,10 +13,9 @@
 
 char *argstostr(int ac, char **av)
 {
-	int i, j, k;
+	int i, j, k, l;
 	char *s = NULL;
 
-	s = malloc(sizeof(char) * 1000);
 	j = 0;
 	if (ac == 0 || av == NULL)
 	{
@@ -22,7 +23,10 @@ char *argstostr(int ac, char **av)
 	}
 	else
 	{
-		for (i = 1; i < ac; i++)
+		l = verifylenargav(ac, av);
+		s = malloc(sizeof(char) * l);
+		k = 0;
+		for (i = 0; i < ac; i++)
 		{
 			for (; av[i][k] != '\0'; k++)
 			{
@@ -36,4 +40,26 @@ char *argstostr(int ac, char **av)
 		s[j] = '\0';
 		return (s);
 	}
+}
+
+/**
+ * verifylenargav - function return len of argv[]
+ * @ac: number of argument
+ * @av: the arguments
+ * Return: int
+ **/
+
+int verifylenargav(int ac, char **av)
+{
+	int i, k, l;
+
+	for (i = 0; i < ac; i++)
+	{
+		for (k = 0; av[i][k] != '\0'; k++)
+		{
+			l++;
+		}
+		l += 1;
+	}
+	return (l);
 }
