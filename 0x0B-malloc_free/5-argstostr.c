@@ -6,6 +6,7 @@
  * *argstostr - function that concatenates all the arguments
  * @ac: number of argument
  * @av: a string
+ * Return: Pointer sur char
  **/
 
 char *argstostr(int ac, char **av)
@@ -13,8 +14,7 @@ char *argstostr(int ac, char **av)
 	int i, j, k;
 	char *s = NULL;
 
-	s = malloc(sizeof(char)*1000);
-
+	s = malloc(sizeof(char) * 1000);
 	j = 0;
 	if (ac == 0 || av == NULL)
 	{
@@ -22,9 +22,9 @@ char *argstostr(int ac, char **av)
 	}
 	else
 	{
-		for(i = 1; i < ac; i++)
+		for (i = 1; i < ac; i++)
 		{
-		        for(; av[i][k] != '\0'; k++)
+			for (; av[i][k] != '\0'; k++)
 			{
 				s[j] = av[i][k];
 				j++;
@@ -32,7 +32,7 @@ char *argstostr(int ac, char **av)
 			s[j] = '\n';
 			j++;
 			k = 0;
-		} 
+		}
 		s[j] = '\0';
 		return (s);
 	}
