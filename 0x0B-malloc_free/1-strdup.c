@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * *_strdup - copy of the string given as a parameter
@@ -19,7 +20,7 @@ char *_strdup(char *str)
 
 	arr = malloc(sizeof(char) * (i + 1));
 	
-	if (str == NULL)
+	if (*str == '\0')
 	{
 		return (NULL);
 	}
