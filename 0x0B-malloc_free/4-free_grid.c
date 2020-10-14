@@ -15,7 +15,6 @@ void free_grid(int **grid, int height)
 
 	for (i = 0; i < height; i++)
 	{
-		printf("%d \n", *grid[i]);
 		free(grid[i]);
 	}
 	free(grid);
