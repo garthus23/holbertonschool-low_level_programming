@@ -9,7 +9,7 @@
  * Return: nothing
  **/
 
-void free_grid(int **grid, int height)
+void free_grid1(int **grid, int height)
 {
 	int i;
 
@@ -50,7 +50,7 @@ int **alloc_grid(int width, int height)
 			}
 			else
 			{
-				free_grid(grid, height);
+				free_grid1(grid, height);
 				return (NULL);
 			}
 		}
