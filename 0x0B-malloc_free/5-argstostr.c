@@ -24,7 +24,7 @@ char *argstostr(int ac, char **av)
 	else
 	{
 		l = verifylenargav(ac, av);
-		s = malloc(sizeof(char) * (l+1));
+		s = malloc(sizeof(char) * (l + 1));
 		if (s != NULL)
 		{
 			k = 0;
