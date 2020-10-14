@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * free_grid - free grid
+ * free_grid1 - free grid
  * @grid: a grid
  * @height: a height
  * Return: nothing
