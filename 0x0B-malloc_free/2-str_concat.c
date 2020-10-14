@@ -16,9 +16,10 @@ char *oneisnull(char *s1, char *s2)
 
 	if (s1 == NULL && s2 == NULL)
 	{
-		return (NULL);
+		arr = malloc(sizeof(char) * (1));
+		arr[0] = '\0';
+		return (arr);
 	}
-
 	else if (s1 == NULL)
 	{
 		for (i = 0; s2[i] != '\0'; i++)
