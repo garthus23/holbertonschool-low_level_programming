@@ -2,6 +2,19 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+void free_grid(int **grid, int height)
+{
+	int i;
+
+	for (i = 0; i < height; i++)
+	{
+		printf("%d \n", *grid[i]);
+		free(grid[i]);
+	}
+	free(grid);
+	grid = NULL;
+}
+
 /**
  * **alloc_grid - print a grid
  * @width: a width
@@ -33,7 +46,7 @@ int **alloc_grid(int width, int height)
 				}
 				else
 				{
-					free(grid);
+					free_grid(grid, 4);
 					return (NULL);
 				}
 			}
@@ -41,13 +54,13 @@ int **alloc_grid(int width, int height)
 		}
 		else
 		{
-			free(grid);
+			free_grid(grid, 4);
 			return (NULL);
 		}
 	}
 	else
 	{
-		free(grid);
+		free_grid(grid, 4);
 		return (NULL);
 	}
 }
