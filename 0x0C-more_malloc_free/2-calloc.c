@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * _calloc - allocates memory for an array
+ * *_calloc - allocates memory for an array
  * @nmemb: numbers of elements
  * @size: size of the byte of element
  * Return: arr a pointer
