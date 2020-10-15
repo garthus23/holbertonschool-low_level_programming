@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * *array_range - create an array range
+ * array_range - create an array range
  * @min: a minimum
  * @max: a maximum
  * Return: 0 when succeed
@@ -22,7 +22,7 @@ int *array_range(int min, int max)
 
 	arr = malloc(sizeof(int) * (max - min + 1));
 
-	if (arr)
+	if (arr != NULL)
 	{
 		for (i = min; i <= max; i++)
 		{
