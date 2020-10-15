@@ -14,7 +14,8 @@ char *_memset(char *arr, unsigned int n)
 
 	for (i = 0; i < n; i++)
 	{
-		arr[i] = 0;
+		*arr = 0;
+		arr++;
 	}
 	return (arr);
 }
@@ -28,7 +29,7 @@ char *_memset(char *arr, unsigned int n)
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *arr = NULL;
+	void *arr;
 
 	if (nmemb == 0 || size == 0)
 	{
@@ -38,6 +39,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (arr)
 	{
 		_memset(arr, nmemb);
+	}
+	else
+	{
+		return(NULL);
 	}
 	return (arr);
 }
