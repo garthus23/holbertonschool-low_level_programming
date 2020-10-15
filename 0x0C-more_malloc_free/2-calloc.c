@@ -2,25 +2,6 @@
 #include <stdlib.h>
 
 /**
- * _memset - memoire set
- * @arr: a pointer sur char
- * @n: an integer
- * Return: a pointer
- **/
-
-char *_memset(char *arr, unsigned int n)
-{
-	unsigned int i;
-
-	for (i = 0; i < n; i++)
-	{
-		*arr = 0;
-		arr++;
-	}
-	return (arr);
-}
-
-/**
  * _calloc - allocates memory for an array
  * @nmemb: numbers of elements
  * @size: size of the byte of element
@@ -29,6 +10,7 @@ char *_memset(char *arr, unsigned int n)
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	unsigned j;
 	void *arr;
 
 	if (nmemb == 0 || size == 0)
@@ -38,7 +20,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	arr = malloc(nmemb * size);
 	if (arr)
 	{
-		_memset(arr, nmemb);
+		for (j = 0; j < (nmemb * size); j++)
+		((char *)arr)[j] = 0;
 	}
 	else
 	{
