@@ -7,6 +7,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int i;
 	char *arr = NULL;
 	
+	
+	if ( nmemb == 0 || size == 0)
+	{
+		return (NULL);
+	}
+
 	arr = malloc(nmemb * size);
 
 	if (arr)
@@ -16,11 +22,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 			arr[i] = 0;
 		}
 		arr[size] = '\0';
-		return (arr);
 	}
-	else
-	{
-		return (NULL);
-	}
-
+	return (arr);
 }
