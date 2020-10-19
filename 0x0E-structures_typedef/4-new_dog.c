@@ -25,9 +25,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
-	(*dog1).name = name1;
-	(*dog1).age = age1;
-	(*dog1).owner = owner1;
+	if (name1 != '\0')
+	{
+		(*dog1).name = name1;
+	}
+	if (age1 != '\0')
+	{
+		(*dog1).age = age1;
+	}
+	if (owner1 != '\0')
+	{
+		(*dog1).owner = owner1;
+	}
 
 	return (dog1);
 }
