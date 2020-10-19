@@ -12,31 +12,37 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	int i = 0, j = 0;
+	char *name1, *owner1;
+	float age1;
 
-	char *name1 = name;
-	char *owner1 = owner;
-	float age1 = age;
+	if (name != '\0')
+	{
+		name1 = name;
+		i++;
+	}
+	if (owner != '\0')
+	{
+		owner1 = owner;
+		i++;
+	}
+	if (age != 0)
+	{
+		age1 = age;
+		j++;
+	}
 
 	struct dog *dog1;
 
-	dog1 = malloc(sizeof(struct dog));
+	dog1 = malloc(sizeof(char *) * i + sizeof(float) * j);
 
 	if (dog1 == NULL)
 	{
 		return (NULL);
 	}
-	if (name1 != '\0')
-	{
-		(*dog1).name = name1;
-	}
-	if (age1 != '\0')
-	{
-		(*dog1).age = age1;
-	}
-	if (owner1 != '\0')
-	{
-		(*dog1).owner = owner1;
-	}
+	(*dog1).name = name1;
+	(*dog1).age = age1;
+	(*dog1).owner = owner1;
 
 	return (dog1);
 }
