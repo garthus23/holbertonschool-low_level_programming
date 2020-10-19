@@ -17,17 +17,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *owner1 = owner;
 	float age1 = age;
 
-	struct dog *dog;
+	struct dog *dog1;
 
-	dog = malloc(sizeof(struct dog));
+	dog1 = malloc(sizeof(struct dog));
 
-	if (dog == NULL)
+	if (dog1 == NULL)
 	{
 		return (NULL);
 	}
-	(*dog).name = name1;
-	(*dog).age = age1;
-	(*dog).owner = owner1;
+	(*dog1).name = name1;
+	(*dog1).age = age1;
+	(*dog1).owner = owner1;
 
-	return (dog);
+	return (dog1);
 }
