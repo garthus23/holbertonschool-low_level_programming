@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * print_name - function that print a name
+ * @name: a name
+ * @f: a pointer to a function
+ **/
+
+void print_name(char *name, void (*f)(char *))
+{
+	f(name);
+}
