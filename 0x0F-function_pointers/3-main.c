@@ -3,21 +3,20 @@
 #include <stdio.h>
 #include <string.h>
 
+/**
+ * main - caclculate from input
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: 0 if it works
+ **/
+
 int main(int argc, char **argv)
 {
-	char *s =  argv[2];
-	int a = atoi(argv[1]);
-	int b = atoi(argv[3]);
-
-	printf ("char *s : %s\n", s);
-	printf("Argv1 : %d\n", atoi(argv[1]));
-	printf("Argv2 : %d\n", atoi(argv[3])); 
 
 	if (argc == 4)
 	{
 		{
-			printf("OK MAIN argv[1] = %s\n", argv[1]);
-			get_op_func((s))(a, b);
+			return (get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
 		}
 	}
 	printf("Error\n");
