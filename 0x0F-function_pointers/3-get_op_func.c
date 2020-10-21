@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * get_op_func - get the calcul to do
@@ -25,5 +26,5 @@ int (*get_op_func(char *s))(int a, int b)
 			return (ops[i].f);
 		}
 	}
-	return (0);
+	exit (99);
 }
