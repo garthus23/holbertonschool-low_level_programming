@@ -7,11 +7,12 @@ int main(int argc, char **argv)
 {
 	if (argc == 4)
 	{
-		if ((strcmp(argv[3], "-") == 0))
 		{
-			f(atoi(argv[2]), atoi(argv[4]));
+			printf("OK MAIN\n");
+			return get_op_func(argv[3])((atoi(argv[2])), (atoi(argv[4])));
 		}
 	}
+	printf("Error\n");
 	return (0);
 
 }
