@@ -12,7 +12,7 @@
 int main(int argc, char **argv)
 {
 
-	if (argc == 4 && argv[2] == '\0')
+	if (argc == 4 && argv[2][1] == '\0')
 	{
 		{
 			printf("%d\n", (get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]))));
