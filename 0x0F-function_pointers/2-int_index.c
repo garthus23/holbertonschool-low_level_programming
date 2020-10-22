@@ -12,9 +12,9 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
-	if (array == NULL || cmp == NULL)
+	if (!array || !cmp )
 	{
-		exit(0);
+		return(-1);
 	}
 
 	if (size > 0)
