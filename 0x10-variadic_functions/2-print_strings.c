@@ -27,6 +27,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("%s%s", value, separator);
 		}
+		else
+		{
+			printf("%s", value);
+		}
 	}
 
 	value = va_arg(args, char*);
