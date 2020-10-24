@@ -63,12 +63,12 @@ void print_all(const char * const format, ...)
 	va_start(values, format);
 
 	i = 0;
-	while (format[i] != '\0')
+	while (format && format[i] != '\0')
 	{
 		j = 0;
 		while (print[j].type != NULL)
 		{
-			if (format[i] == *print[j].type && values != NULL)
+			if (format[i] == *print[j].type)
 			{
 				print[j].f(values);
 			}
