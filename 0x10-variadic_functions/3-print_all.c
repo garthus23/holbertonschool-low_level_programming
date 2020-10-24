@@ -51,7 +51,7 @@ void print_float(va_list a)
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i, j; 
+	unsigned int i, j;
 	va_list values;
 
 	type_t print[] = {{"c", print_char},
