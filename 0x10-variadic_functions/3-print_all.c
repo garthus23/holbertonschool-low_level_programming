@@ -1,7 +1,4 @@
 #include "variadic_functions.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
 
 /**
  * print_char - print a char
@@ -54,11 +51,8 @@ void print_float(va_list a)
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0;
-	unsigned int j;
+	unsigned int i, j; 
 	va_list values;
-
-	va_start(values, format);
 
 	type_t print[] = {{"c", print_char},
 		{"i", print_int},
@@ -66,8 +60,9 @@ void print_all(const char * const format, ...)
 		{"s", print_string},
 		{NULL, NULL}};
 
+	va_start(values, format);
 
-
+	i = 0;
 	while (format[i] != '\0')
 	{
 		j = 0;
@@ -89,5 +84,6 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
+
 	va_end(values);
 }
