@@ -29,7 +29,13 @@ void print_int(va_list a)
 
 void print_string(va_list a)
 {
-	printf("%s", va_arg(a, char*));
+	char *tmp = va_arg(a, char*);
+
+	if (tmp == NULL)
+	{
+		tmp = "(nil)";
+	}
+	printf("%s", tmp);
 }
 
 /**
@@ -53,6 +59,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i, j;
 	va_list values;
+	char *sep = "";
 
 	type_t print[] = {{"c", print_char},
 		{"i", print_int},
@@ -70,16 +77,11 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *print[j].type)
 			{
+				printf("%s", sep);
 				print[j].f(values);
+				sep = ", ";
 			}
 			j++;
-		}
-
-		if (format[i + 1] != '\0' && (format[i] == 'c' ||
-					format[i] == 'i' ||
-					format[i] == 's'))
-		{
-			printf(", ");
 		}
 		i++;
 	}
