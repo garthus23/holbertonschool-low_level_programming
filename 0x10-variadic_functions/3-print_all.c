@@ -68,7 +68,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (print[j].type != NULL)
 		{
-			if (format[i] == *print[j].type)
+			if (format[i] == *print[j].type && values != NULL)
 			{
 				print[j].f(values);
 			}
