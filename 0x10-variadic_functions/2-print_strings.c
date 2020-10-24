@@ -35,10 +35,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	value = va_arg(args, char*);
 
-	if (value != NULL)
+	if (value == NULL)
 	{
-		printf("%s\n", value);
+		value = "(nil)";
 	}
+
+	printf("%s\n", value);
 
 	va_end(args);
 }

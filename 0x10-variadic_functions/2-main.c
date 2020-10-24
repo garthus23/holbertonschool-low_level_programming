@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	print_strings(NULL, 2, "toto", "Django");
+	print_strings(", ", 2, "toto", NULL);
 	return (0);
 }
