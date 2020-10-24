@@ -1,7 +1,12 @@
 #ifndef VARIADIC_H
 #define VARIADIC_H
 #include <stdarg.h>
-typedef struct format 
+/**
+ * struct format - func cases
+ * @type: type
+ * @f: pointer sur function
+ **/
+typedef struct format
 {
 	char *type;
 	void (*f)(va_list a);
