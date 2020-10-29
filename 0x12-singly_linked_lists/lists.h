@@ -7,11 +7,11 @@
  * @len: an int
  * @next: pointer next element
  **/
-typedef struct lst
+typedef struct list_s
 {
 	char *str;
 	int len;
-	struct lst *next;
+	struct list_s *next;
 } list_t;
 
 size_t print_list(const list_t *h);
