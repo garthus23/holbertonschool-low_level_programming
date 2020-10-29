@@ -9,20 +9,20 @@
  * Return: number of elements
  **/
 
-int print_list(list_t *st)
+size_t print_list(const list_t *h)
 {
 	int i = 0;
 
-	for (; st != NULL; st = st->next)
+	for (; h != NULL; h = h->next)
 	{
-		if (st->str != NULL)
+		if (h->str != NULL)
 		{
-			printf("[%d] %s\n", st->len, st->str);
+			printf("[%d] %s\n", h->len, h->str);
 			i++;
 		}
 		else
 		{
-			printf("[%d] (nil)\n", st->len);
+			printf("[%d] (nil)\n", h->len);
 			i++;
 		}
 	}

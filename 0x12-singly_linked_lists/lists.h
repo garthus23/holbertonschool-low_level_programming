@@ -14,5 +14,5 @@ typedef struct lst
 	struct lst *next;
 } list_t;
 
-int print_list(list_t *st);
+size_t print_list(const list_t *h);
 #endif
