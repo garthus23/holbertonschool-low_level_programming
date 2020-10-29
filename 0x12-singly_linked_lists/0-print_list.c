@@ -5,7 +5,7 @@
 
 /**
  * print_list - print a list
- * @st: pointer on struct
+ * @h: pointer on struct
  * Return: number of elements
  **/
 
