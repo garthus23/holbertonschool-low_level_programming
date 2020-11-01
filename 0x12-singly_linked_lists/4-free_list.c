@@ -6,6 +6,7 @@
 /**
  * free_list - free the struct
  * @head: a struct
+ *
  **/
 
 void free_list(list_t *head)
