@@ -38,10 +38,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	for (; i < (index - 1); tmp = tmp->next)
 	{
-		if (tmp == NULL || tmp->next == NULL)
-		{
+		if (tmp->next == NULL)
 			return (-1);
-		}
 		i++;
 	}
 	before = tmp;
