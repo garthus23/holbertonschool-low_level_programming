@@ -7,7 +7,6 @@
  * @h: an element
  * Return: an unsigned int
  **/
-
 size_t print_listint(const listint_t *h)
 {
 	unsigned int i;
