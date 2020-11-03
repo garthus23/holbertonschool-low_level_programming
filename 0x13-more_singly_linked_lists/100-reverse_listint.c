@@ -26,19 +26,29 @@ listint_t *reverse_listint(listint_t **head)
 
 	tmp = *head;
 	tmp = tmp->next;
-	next = tmp->next;
-	tmp->next = *head;
-	(*head)->next = NULL;
 
-	for (; next->next != NULL;)
+	if (tmp->next != NULL)
 	{
-		*head = tmp;
-		tmp = next;
-		next = next->next;
+		next = tmp->next;
 		tmp->next = *head;
+		(*head)->next = NULL;
+
+		for (; next->next != NULL;)
+		{
+			*head = tmp;
+			tmp = next;
+			next = next->next;
+			tmp->next = *head;
+		}
+		*head = tmp;
+		next->next = tmp;
+		*head = next;
 	}
-	*head = tmp;
-	next->next = tmp;
-	*head = next;
+	else
+	{
+		tmp->next = *head;
+		(*head)->next = NULL;
+		*head = tmp;
+	}
 	return (*head);
 }
