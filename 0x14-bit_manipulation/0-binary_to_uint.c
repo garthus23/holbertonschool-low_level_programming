@@ -12,6 +12,11 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int power = 1;
 	unsigned int result;
 
+	if (!b)
+	{
+		return (0);
+	}
+
 	for (i = 0; b[i] != '\0'; i++)
 	{}
 	k = i;
