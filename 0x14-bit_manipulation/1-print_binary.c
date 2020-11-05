@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
  * suite - next
@@ -23,7 +24,7 @@ void suite(unsigned long int *result, unsigned long int *n)
 		_putchar('1');
 		*result += 1;
 	}
-	else
+	else if (*n != *result || *result != '0')
 	{
 		_putchar('0');
 	}
@@ -41,28 +42,38 @@ void print_binary(unsigned long int n)
 
 	result2 = &result;
 	n2 = &n;
-
 	if (n > 2)
 	{
 		for (; power * 2 <= n ; power = power * 2)
+		{}
+		if (power == n)
 		{
-		}
-		for (; power != 2;)
-		{
+			result = n;
+			_putchar('1');
 			for (; power2 * 2 < power; power2 = power2 * 2)
-			{
-			}
-			if ((result + power) < n)
-			{
-				_putchar('1');
-				result = result + power;
-			}
-			else
 			{
 				_putchar('0');
 			}
-			power = power2;
-			power2 = 1;
+		}
+		else
+		{
+			for (; power != 2;)
+			{
+				for (; power2 * 2 < power; power2 = power2 * 2)
+				{
+				}
+				if ((result + power) < n)
+				{
+					_putchar('1');
+					result = result + power;
+				}
+				else
+				{
+					_putchar('0');
+				}
+				power = power2;
+				power2 = 1;
+			}
 		}
 	}
 	suite(result2, n2);
