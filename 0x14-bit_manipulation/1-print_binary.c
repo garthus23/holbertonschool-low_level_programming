@@ -2,29 +2,30 @@
 #include <stdlib.h>
 
 /**
- * suite - next
- * @result: tmp result
+ * suit - next
+ * @res: tmp result
  * @n: the integer
+ * @pow: i've got the power
  * Return : none
  **/
 
-void suite(unsigned long int *result, unsigned long int *n)
+void suit(unsigned long int *res, unsigned long int *n, unsigned long int *pow)
 {
-	if ((*result + 2) <= *n)
+	if ((*res + 2) <= *n)
 	{
 		_putchar('1');
-		*result += 2;
+		*res += 2;
 	}
 	else if (*n > 2)
 	{
 		_putchar('0');
 	}
-	if ((*result + 1) <= *n)
+	if ((*res + 1) <= *n)
 	{
 		_putchar('1');
-		*result += 1;
+		*res += 1;
 	}
-	else if (*n != *result || *n == 0)
+	else if (*n != *pow)
 	{
 		_putchar('0');
 	}
@@ -38,10 +39,9 @@ void suite(unsigned long int *result, unsigned long int *n)
 void print_binary(unsigned long int n)
 {
 	unsigned long int power = 1, power2 = 1, result = 0;
-	unsigned long int *result2, *n2;
+	unsigned long int *result2, *n2, *power3;
 
-	result2 = &result;
-	n2 = &n;
+	result2 = &result, n2 = &n, power3 = &power;
 	if (n > 2)
 	{
 		for (; power * 2 <= n ; power = power * 2)
@@ -76,5 +76,5 @@ void print_binary(unsigned long int n)
 			}
 		}
 	}
-	suite(result2, n2);
+	suit(result2, n2, power3);
 }
