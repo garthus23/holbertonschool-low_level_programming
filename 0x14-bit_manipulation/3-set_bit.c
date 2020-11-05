@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 
 /**
@@ -10,6 +9,6 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	*n |= 1UL << index;
+	*n |= 1ULL << index;
 	return (*n);
 }
