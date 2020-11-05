@@ -24,7 +24,7 @@ void suite(unsigned long int *result, unsigned long int *n)
 		_putchar('1');
 		*result += 1;
 	}
-	else if (*n != *result || *result != '0')
+	else if (*n != *result || *n == 0)
 	{
 		_putchar('0');
 	}
