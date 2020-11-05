@@ -62,7 +62,7 @@ void print_binary(unsigned long int n)
 				for (; power2 * 2 < power; power2 = power2 * 2)
 				{
 				}
-				if ((result + power) < n)
+				if ((result + power) <= n)
 				{
 					_putchar('1');
 					result = result + power;
