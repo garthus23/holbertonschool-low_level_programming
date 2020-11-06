@@ -40,11 +40,10 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int power = 1, power2 = 1, result = 0;
 	unsigned long int *result2, *n2, *power3;
-
 	result2 = &result, n2 = &n, power3 = &power;
 	if (n > 2)
 	{
-		for (; (power * 2 <= n) && (power * 2 < 4294967295); power = power * 2)
+		for (; (power * 2 <= n) && (power * 2 <= ULONG_MAX); power = power * 2)
 		{}
 		if (power == n)
 		{
