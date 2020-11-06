@@ -21,7 +21,7 @@ void print64(void)
  * @p: i've got the power
  * Return : none
  **/
-void suit(unsigned long long *r, unsigned long int *n, unsigned long long *p)
+void suit(unsigned long int *r, unsigned long int *n, unsigned long int *p)
 {
 	if ((*r + 2) <= *n)
 	{
@@ -50,8 +50,8 @@ void suit(unsigned long long *r, unsigned long int *n, unsigned long long *p)
  **/
 void print_binary(unsigned long int n)
 {
-	unsigned long long power = 1, power2 = 1, result = 0;
-	unsigned long long *result2, *power3;
+	unsigned long int power = 1, power2 = 1, result = 0;
+	unsigned long int *result2, *power3;
 	unsigned long int *n2;
 
 	result2 = &result, n2 = &n, power3 = &power;
