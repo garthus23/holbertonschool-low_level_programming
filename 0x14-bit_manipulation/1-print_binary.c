@@ -51,13 +51,14 @@ void suit(unsigned long int *r, unsigned long int *n, unsigned long int *p)
 void print_binary(unsigned long int n)
 {
 	unsigned long int power = 1, power2 = 1, result = 0;
-	unsigned long int *result2, *power3;
-	unsigned long int *n2;
+	unsigned long int *result2, *power3, *n2;
 
 	result2 = &result, n2 = &n, power3 = &power;
-
 	if (n == ULONG_MAX)
+	{
 		print64();
+		return;
+	}
 	else if (n > 2)
 	{
 		for (; ((power * 2) <= n);  power = power * 2)
@@ -67,9 +68,7 @@ void print_binary(unsigned long int n)
 			result = n;
 			_putchar('1');
 			for (; power2 * 2 < power; power2 = power2 * 2)
-			{
 				_putchar('0');
-			}
 		}
 		else
 		{
