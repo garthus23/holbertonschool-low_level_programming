@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
  * print64 - print64 bits
