@@ -44,7 +44,7 @@ void print_binary(unsigned long int n)
 	result2 = &result, n2 = &n, power3 = &power;
 	if (n > 2)
 	{
-		for (; power * 2 <= n ; power = power * 2)
+		for (; (power * 2 <= n) && (power * 2 < 4294967295); power = power * 2)
 		{}
 		if (power == n)
 		{
@@ -59,7 +59,7 @@ void print_binary(unsigned long int n)
 		{
 			for (; power != 2;)
 			{
-				for (; power2 * 2 < power; power2 = power2 * 2)
+				for (; (power2 * 2 < power); power2 = power2 * 2)
 				{
 				}
 				if ((result + power) <= n)
