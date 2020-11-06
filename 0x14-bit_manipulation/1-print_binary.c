@@ -57,10 +57,11 @@ void print_binary(unsigned long int n)
 	unsigned long int *n2;
 
 	result2 = &result, n2 = &n, power3 = &power;
-	if (n > 2)
+
+	if (n == ULONG_MAX)
+		print64();
+	else if (n > 2)
 	{
-		if (n == ULONG_MAX)
-			return (print64());
 		for (; ((power * 2) <= n);  power = power * 2)
 		;
 		if (power == n)
