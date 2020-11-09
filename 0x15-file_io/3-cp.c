@@ -50,7 +50,9 @@ int main(int ac, char **av)
 		exit(98);
 	}
 	read(fd1, buf, 1024);
-	fd2 = open(av[2], O_CREAT | O_WRONLY, 0664);
+	fd2 = open(av[2], O_APPEND | O_WRONLY);
+	if (fd2 == -1)
+		fd2 = open(av[2], O_CREAT | O_WRONLY, 0664);
 	if (fd2 == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", av[2]);
