@@ -13,7 +13,7 @@ void checkclose(int *fd1, int *fd2)
 		dprintf(2, "Error: Can't close fd fd1");
 		exit(100);
 	}
-	else if (close(*fd2) == -1)
+	if (close(*fd2) == -1)
 	{
 		dprintf(2, "Error: Can't close fd fd2");
 		exit(100);
