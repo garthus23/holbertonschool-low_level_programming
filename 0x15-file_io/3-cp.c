@@ -34,7 +34,7 @@ int main(int ac, char **av)
 {
 	int fd1;
 	int fd2;
-	int i;
+	int total;
 	char *buf;
 
 	buf = malloc(sizeof(char) * 1024);
@@ -49,7 +49,6 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	read(fd1, buf, 1024);
 	fd2 = open(av[2], O_APPEND | O_WRONLY);
 	if (fd2 == -1)
 		fd2 = open(av[2], O_CREAT | O_WRONLY, 0664);
@@ -60,9 +59,10 @@ int main(int ac, char **av)
 	}
 	if (buf)
 	{
-		for (i = 0; buf[i] != '\0'; i++)
-		;
-		write(fd2, buf, i);
+		while ((total = read(fd1, buf, 1024)) > 0)
+		{
+			write(fd2, buf, total);
+		}
 	}
 	checkclose(&fd1, &fd2);
 	free(buf);
