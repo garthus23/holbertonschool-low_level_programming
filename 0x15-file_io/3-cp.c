@@ -24,7 +24,7 @@ int main(int ac, char **av)
 	if (fd1 == -1)
 	{
 		dprintf(2, "Error: Can't read from file NAME_OF_THE_FILE\n");
-		return (98);
+		exit(98);
 	}
 	read(fd1, buf, 1024);
 	close(fd1);
@@ -32,7 +32,7 @@ int main(int ac, char **av)
 	if (fd2 == -1)
 	{
 		dprintf(2, "Error: Can't write to NAME_OF_THE_FILEi\n");
-		return (99);
+		exit(99);
 	}
 	if (buf)
 	{
