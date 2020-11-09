@@ -8,12 +8,12 @@
  **/
 void checkclose(int *fd1, int *fd2)
 {
-	if (close(*fd1) == -1)
+	if (close(*fd1))
 	{
 		dprintf(2, "Error: Can't close fd fd1");
 		exit(100);
 	}
-	if (close(*fd2) == -1)
+	if (close(*fd2))
 	{
 		dprintf(2, "Error: Can't close fd fd2");
 		exit(100);
