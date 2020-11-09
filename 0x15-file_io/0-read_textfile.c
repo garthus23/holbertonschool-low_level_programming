@@ -1,9 +1,8 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include <unistd.h>
+#include "holberton.h"
 
 /**
  * read_textfile - read a text file
@@ -15,15 +14,14 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	int i;
+	unsigned int i;
 	char buf[letters];
 
 	fd = open(filename, O_RDONLY);
 
 	if (fd == -1)
 	{
-		printf("Failed to open the file");
-		exit(1);
+		return (0);
 	}
 
 	read(fd, buf, letters);
@@ -33,7 +31,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	for (i = 0; buf[i] != '\0'; i++)
 	{
-		putchar(buf[i]);
+		 write(1, &buf[i], 1);
 	}
 	return (i);
 }
