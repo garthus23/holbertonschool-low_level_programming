@@ -1,7 +1,3 @@
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
 #include "holberton.h"
 
 /**
@@ -18,7 +14,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char buf[letters];
 
 	fd = open(filename, O_RDONLY);
-
 	if (fd == -1)
 	{
 		return (0);
@@ -31,7 +26,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	for (i = 0; buf[i] != '\0'; i++)
 	{
-		 write(1, &buf[i], 1);
+		write(1, &buf[i], 1);
 	}
 	return (i);
 }
