@@ -32,9 +32,7 @@ void checkclose(int *fd1, int *fd2)
 
 int main(int ac, char **av)
 {
-	int fd1;
-	int fd2;
-	int total;
+	int fd1, fd2, total;
 	char *buf;
 
 	buf = malloc(sizeof(char) * 1024);
@@ -67,8 +65,7 @@ int main(int ac, char **av)
 		}
 		if (total == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-			exit(98);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 		}
 	}
 	checkclose(&fd1, &fd2);
