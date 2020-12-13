@@ -23,7 +23,11 @@ int main(void)
     add_dnodeint_end(&head, 1024);
     print_dlistint(head);
     printf("-----------------\n");
-    insert_dnodeint_at_index(&head, 5, 4096);
+    insert_dnodeint_at_index(&head, 8, 4096);
+    insert_dnodeint_at_index(&head, 0, 103);
+    insert_dnodeint_at_index(&head, 5, 1000);
+    insert_dnodeint_at_index(&head, 3, 111);
+
     print_dlistint(head);
     free_dlistint(head);
     head = NULL;
