@@ -2,11 +2,17 @@
 #include <stdlib.h>
 #include "lists.h"
 
+/**
+ * dlistint_t *insert_dnodeint_at_index- insert node at index
+ * @h: double linked list
+ * @idx: index
+ * @n: value to add
+ * Return: return the head of the double list
+**/
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new;
 	dlistint_t *current;
-//	dlistint_t *next;
 	unsigned int i;
 
 	new = malloc(sizeof(dlistint_t));
@@ -28,11 +34,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new;
 		return (new);
 	}
-		
-
-
-
-	for(i = 1; current->next != NULL; current = current->next)
+	for (i = 1; current->next != NULL; current = current->next)
 	{
 		if (i == idx)
 		{
