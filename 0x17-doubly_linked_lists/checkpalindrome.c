@@ -8,11 +8,9 @@ int main(void)
 {
 	int i;
 	int j;
-	int k;
 	char str[6];
 	int tmp;
-	int result;
-	int len;
+	int result = 0;
 
 
 	for (i=100 ; i < 1000; i++)
@@ -22,9 +20,12 @@ int main(void)
 			tmp = i * j;
 			sprintf(str,"%d", tmp);
 			if (str[0] == str[5] && str[1] == str[4] && str[3] == str[2])
-				result = tmp;
+			{
+				if (tmp > result)
+					result = tmp;
+				printf("result : %d = %d * %d\n", result, i , j); 
+			}
 		}
 	}
-	printf("%d\n", result);
 	return (0);
 }
