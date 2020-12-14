@@ -21,6 +21,12 @@ int main(void)
     add_dnodeint_end(&head, 98);
     add_dnodeint_end(&head, 402);
     add_dnodeint_end(&head, 1024);
+    delete_dnodeint_at_index(&head, 32);
+    print_dlistint(head);
+    printf("-----------------\n");
+    print_dlistint(head);
+    printf("-----------------\n");
+    delete_dnodeint_at_index(&head, 7);
     print_dlistint(head);
     printf("-----------------\n");
     delete_dnodeint_at_index(&head, 5);

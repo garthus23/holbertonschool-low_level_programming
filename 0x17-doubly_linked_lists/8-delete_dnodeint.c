@@ -22,9 +22,9 @@ int deletefirstnode(dlistint_t **head, unsigned int index)
 	if (index == 0 && !current->next)
 	{
 		*head = NULL;
-		return (-1);
+		return (1);
 	}
-	return (0);
+	return (1);
 }
 
 
