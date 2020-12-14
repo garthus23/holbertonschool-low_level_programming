@@ -24,7 +24,7 @@ int deletefirstnode(dlistint_t **head, unsigned int index)
 		*head = NULL;
 		return (1);
 	}
-	return (1);
+	return (-1);
 }
 
 
