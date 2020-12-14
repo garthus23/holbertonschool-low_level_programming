@@ -19,7 +19,7 @@ int deletefirstnode(dlistint_t **head, unsigned int index)
 		*head = current->next;
 		return (1);
 	}
-	if (index == 0 && !current->next)
+	if (index == 0 && current->next != NULL)
 	{
 		*head = NULL;
 		return (1);
