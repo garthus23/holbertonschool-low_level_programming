@@ -13,13 +13,13 @@ int deletefirstnode(dlistint_t **head, unsigned int index)
 	dlistint_t *current;
 
 	current = *head;
-	if (index == 0 && current->next)
+	if (index == 0 && current->next != NULL)
 	{
 		current->next->prev = NULL;
 		*head = current->next;
 		return (1);
 	}
-	if (index == 0 && current->next != NULL)
+	if (index == 0 && current->next == NULL)
 	{
 		*head = NULL;
 		return (1);
