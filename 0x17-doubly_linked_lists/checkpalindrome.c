@@ -22,8 +22,10 @@ int main(void)
 			if (str[0] == str[5] && str[1] == str[4] && str[3] == str[2])
 			{
 				if (tmp > result)
+				{
 					result = tmp;
-				printf("result : %d = %d * %d\n", result, i , j); 
+					printf("result : %d = %d * %d\n", result, i , j);
+				}
 			}
 		}
 	}
