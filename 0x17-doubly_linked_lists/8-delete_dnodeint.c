@@ -21,6 +21,7 @@ int deletefirstnode(dlistint_t **head, unsigned int index)
 	}
 	if (index == 0 && current->next == NULL)
 	{
+		free(*head);
 		*head = NULL;
 		return (1);
 	}
