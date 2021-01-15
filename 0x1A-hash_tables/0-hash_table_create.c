@@ -10,9 +10,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *array;
 
-	array = malloc(sizeof(unsigned long int) * size);
+	if (size > 0)
+		array = malloc(sizeof(unsigned long int) * size);
 
-	if (!array)
+	if (!array || size == 0)
 	{
 		return (NULL);
 	}
