@@ -30,10 +30,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	strcpy(node->key, key);
 	strcpy(node->value, value);
 
-	printf("%ld\n", index);
-	printf("%s\n", node->value);
-	printf("%s\n", node->key);
-
 	node->next = NULL;
 
 	return (1);
