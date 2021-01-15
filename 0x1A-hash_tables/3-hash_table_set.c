@@ -15,6 +15,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *node;
 	unsigned long int index;
 
+	if (strlen(key) == 0)
+		return (0);
+
 	index = key_index((unsigned char *)key, ht->size);
 	node = ht->array[index];
 	if (node == NULL)
@@ -26,6 +29,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	strcpy(node->key, key);
 	strcpy(node->value, value);
+
+
+
+	printf("%ld\n", index); 
+	printf("%s\n", node->value);
+	printf("%s\n", node->key);
 
 	node->next = NULL;
 
