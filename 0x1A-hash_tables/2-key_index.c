@@ -16,7 +16,7 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 
 	while (n > size)
 	{
-		n = n / 256;
+		n = n / size;
 	}
 
 	return (n);
