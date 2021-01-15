@@ -32,7 +32,6 @@ hash_node_t *ht_pair(const char *key, const char *value)
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	(void)value;
 	unsigned long int index;
 
 	if (strlen(key) == 0)
@@ -44,5 +43,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = ht_pair(key, value);
 		return (1);
 	}
-	return (1);
+	return (0);
 }

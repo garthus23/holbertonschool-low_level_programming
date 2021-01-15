@@ -3,6 +3,13 @@
 #include <string.h>
 #include "hash_tables.h"
 
+/**
+ * hash_table_get - get a value of a key
+ * @ht: a hash table
+ * @key: a key
+ * Return: a node value
+ */
+
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int index;
@@ -10,7 +17,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	index = key_index((const unsigned char *)key, ht->size);
 	node = ht->array[index];
-	
+
 	if (node == NULL)
 		return (NULL);
 
