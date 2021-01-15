@@ -12,11 +12,12 @@
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
 	unsigned long int n;
+
 	n = hash_djb2(key);
 
 	while (n > size)
 	{
-		n = n / 512;
+		n = n % size;
 	}
 
 	return (n);
