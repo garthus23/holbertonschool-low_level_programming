@@ -33,6 +33,9 @@ hash_node_t *ht_pair(const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
+	hash_node_t *prev;
+	hash_node_t *node;
+
 
 	if (strlen(key) == 0)
 		return (0);
@@ -43,5 +46,25 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = ht_pair(key, value);
 		return (1);
 	}
+
+	if (ht->array[index] != NULL)
+	{
+		node = ht->array[index];
+		if (strcmp(node->key, key) == 0)
+		{
+			free(node->value);
+			node->value = malloc(strlen(value) + 1);
+			strcpy(node->value, value);
+			return (1);
+		}
+		prev = malloc(sizeof(prev));
+		prev->key = malloc(strlen(key + 1));
+		strcpy(node->key, key);
+		prev->value = malloc(strlen(value + 1));
+		strcpy(prev->value, value);
+		prev->next = node;
+		ht->array[index] = prev;
+	}
 	return (0);
+
 }
