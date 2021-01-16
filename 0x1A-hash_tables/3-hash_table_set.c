@@ -46,20 +46,22 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = ht_pair(key, value);
 		return (1);
 	}
-
 	if (ht->array[index] != NULL)
 	{
 		node = ht->array[index];
-/*
- *		##### value update on same key : not an exercice scenario ####
- *		if (strcmp(node->key, key) == 0)
- *		{
- *			free(node->value);
- *			node->value = malloc(strlen(value) + 1);
- *			strcpy(node->value, value);
- *			return (1);
- *		}
- */
+
+		while (node)
+		{
+			if (strcmp(node->key, key) == 0)
+			{
+				free(node->value);
+				node->value = malloc(strlen(value) + 1);
+				strcpy(node->value, value);
+				return (1);
+			}
+			node = node->next;
+		}
+		node = ht->array[index];
 		prev = malloc(sizeof(prev));
 		prev->key = malloc(strlen(key + 1));
 		strcpy(prev->key, key);
@@ -70,5 +72,4 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (1);
 	}
 	return (0);
-
 }
