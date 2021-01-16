@@ -50,16 +50,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht->array[index] != NULL)
 	{
 		node = ht->array[index];
-		if (strcmp(node->key, key) == 0)
-		{
-			free(node->value);
-			node->value = malloc(strlen(value) + 1);
-			strcpy(node->value, value);
-			return (1);
-		}
+/*
+ *		##### value update on same key : not an exercice scenario ####
+ *		if (strcmp(node->key, key) == 0)                
+ *		{
+ *			free(node->value);
+ *			node->value = malloc(strlen(value) + 1);
+ *			strcpy(node->value, value);
+ *			return (1);
+ *		}
+ */
 		prev = malloc(sizeof(prev));
 		prev->key = malloc(strlen(key + 1));
-		strcpy(node->key, key);
+		strcpy(prev->key, key);
 		prev->value = malloc(strlen(value + 1));
 		strcpy(prev->value, value);
 		prev->next = node;
