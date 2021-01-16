@@ -52,7 +52,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		node = ht->array[index];
 /*
  *		##### value update on same key : not an exercice scenario ####
- *		if (strcmp(node->key, key) == 0)                
+ *		if (strcmp(node->key, key) == 0)
  *		{
  *			free(node->value);
  *			node->value = malloc(strlen(value) + 1);
