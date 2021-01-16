@@ -67,6 +67,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		strcpy(prev->value, value);
 		prev->next = node;
 		ht->array[index] = prev;
+		return (1);
 	}
 	return (0);
 
