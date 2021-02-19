@@ -13,6 +13,6 @@ clean:
 oclean:
 	${RM} ${OBJ}
 fclean:
-	${RM} *.swp ${NAME}
+	${RM} *.~ ${NAME}
 	${RM} ${OBJ}
 re: oclean all
