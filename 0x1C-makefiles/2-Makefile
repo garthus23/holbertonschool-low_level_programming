@@ -1,14 +1,8 @@
 CC = gcc
-SRC = .c
-OBJ = .o
+SRC = main.c holberton.c
+OBJ = main.o holberton.o 
 NAME = holberton
 
 
-all: holberton
-
-holberton:
-	${CC} -c -o main.o main.c
-	${CC} -c -o holberton.o holberton.c
-	${CC}  main.o holberton.o -o holberton
-clean:
-	rm -rf *.o
+$all: $(OBJ)
+	$(CC)  $(OBJ) -o $(NAME)
