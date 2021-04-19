@@ -60,7 +60,7 @@ void tothemiddle(int *newarray, size_t *middle)
 	for (i = (*middle); newarray[i] != '\0'; i++)
 	{
 		if (newarray[i + 1] == '\0')
-			printf("%d", newarray[i]);	
+			printf("%d", newarray[i]);
 		else
 			printf("%d, ", newarray[i]);
 	}
@@ -103,11 +103,11 @@ int binary_search(int *array, size_t size, int value)
 			if (newarray[middle] < value)
 			{
 				totheright(newarray, &middle);
-			}			
+			}
 			if (newarray[middle] == value)
 			{
 				tothemiddle(newarray, &middle);
-				return middle;
+				return (middle);
 			}
 		}
 		printf("Searching in array: %d\n", newarray[middle]);
