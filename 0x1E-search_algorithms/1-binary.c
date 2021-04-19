@@ -1,9 +1,11 @@
 #include "search_algos.h"
 
-
-
-
-
+/**
+ * totheleft - keep the left side from the middle
+ * @newarray: the array to parse
+ * @middle: the middle
+ * Return: Rien
+ */
 void totheleft(int *newarray, size_t *middle)
 {
 	size_t i;
@@ -18,6 +20,12 @@ void totheleft(int *newarray, size_t *middle)
 	(*middle) = (*middle) / 2;
 }
 
+/**
+ * totheright - keep the right side from the middle
+ * @newarray: the array to parse
+ * @middle: the middle
+ * Return: Rien
+ */
 void totheright(int *newarray, size_t *middle)
 {
 	size_t tmp, i;
@@ -38,7 +46,34 @@ void totheright(int *newarray, size_t *middle)
 	(*middle) = tmp / 2;
 }
 
+/**
+ * tothemiddle - last middle to print
+ * @newarray: the array to print
+ * @middle: the middle
+ * Return: rien
+ */
+void tothemiddle(int *newarray, size_t *middle)
+{
+	size_t i;
 
+	printf("Searching in array: ");
+	for (i = (*middle); newarray[i] != '\0'; i++)
+	{
+		if (newarray[i + 1] == '\0')
+			printf("%d", newarray[i]);	
+		else
+			printf("%d, ", newarray[i]);
+	}
+	printf("\n");
+}
+
+/**
+ * binary_search - search binary algo
+ * @array: an array
+ * @size: the size of the aray
+ * @value: value to find
+ * Return: rien
+ */
 int binary_search(int *array, size_t size, int value)
 {
 	size_t middle, i;
@@ -71,15 +106,7 @@ int binary_search(int *array, size_t size, int value)
 			}			
 			if (newarray[middle] == value)
 			{
-				printf("Searching in array: ");
-				for (i = middle; newarray[i] != '\0'; i++)
-				{
-					if (newarray[i + 1] == '\0')
-						printf("%d", newarray[i]);	
-					else
-						printf("%d, ", newarray[i]);
-				}
-				printf("\n");
+				tothemiddle(newarray, &middle);
 				return middle;
 			}
 		}
