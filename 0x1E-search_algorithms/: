@@ -1,0 +1,58 @@
+#include "search_algos.h"
+
+int binary_search(int *array, size_t size, int value)
+{
+	(void)value;
+	(void)size;
+	size_t middle;
+	size_t i;
+	int newarray[size];
+
+
+	if (array)
+	{
+		for (i = 0; i < size; i++)
+			newarray[i] = array[i];
+		
+		printf("Searching in array: ");
+		for (i = 0; i != size - 1; i++)
+			printf("%ld, ", i);
+		printf("%ld\n", i);
+
+		middle = size / 2;
+		if (size % 2 == 0)
+			middle = (size - 1) / 2;
+		
+		if (newarray[middle] == value)
+			return middle;
+
+		printf("middle = %ld\n", middle);
+
+		while (newarray[middle] > value && middle != 1)
+		{
+			for (i = 0; i < middle - 1; i++)
+			{
+				newarray[i] = array[i];
+				printf("%d, ", newarray[i]);
+			}
+			newarray[i] = array[i];
+			printf("%d\n", newarray[i]);
+			newarray[middle] = '\0';
+			middle = middle / 2;
+		}
+		if (newarray[middle] < value && middle != 1)
+		{
+			middle++;
+			for (i = 0; middle < size - 1; i++, middle++)
+			{
+				newarray[i] = array[middle];
+				printf("%d, ", newarray[i]);
+			}
+			newarray[i] = array[middle];
+			printf("%d\n", newarray[i]);
+			newarray[middle] = '\0';
+			middle = middle / 2;
+		}
+	}
+	return (-1);
+}
