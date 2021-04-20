@@ -77,7 +77,7 @@ void tothemiddle(int *newarray, size_t *middle)
 int binary_search(int *array, size_t size, int value)
 {
 	size_t middle, i;
-	int newarray[size];
+	int newarray[1000];
 
 	if (array)
 	{
